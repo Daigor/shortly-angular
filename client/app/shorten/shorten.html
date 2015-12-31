@@ -1,6 +1,13 @@
 <div id='container'>
 <!-- Your code here -->
-
+  <form name="inputform" ng-submit="addLink()" ng-disabled="inputform.$invalid">
+      <input class='text' type='url' name='url' ng-model="url" required>
+      <span ng-show="inputform.url.$invalid && !inputform.url.$pristine">Url is not a valid url.</span>
+      <br/>
+      <button type='submit' value='Shorten'>Add Url</button>
+  </form>
+  <!--<img class='spinner' src='/spiffygif_46x46.gif'>-->
+  <div class='message'></div>
 </div>
 
 

@@ -9,7 +9,6 @@ angular.module('shortly.services', [])
 
   function getLinks () {
     return $http.get('/api/links').then(function (res) {
-      
       return res.data;
     }, function (err) {
       return err
@@ -18,7 +17,6 @@ angular.module('shortly.services', [])
 
   function addLink(link) {
     return $http.post('/api/links', link).then(function(res) {
-      
       return res.data;
     }, function (err) {
       return err;
