@@ -13,4 +13,21 @@ angular.module('shortly.links', [])
   }
   
   $scope.getLinks();
+})
+// .directive('linkTest', function(){
+//   return {
+//     template: 'Visits: {{link.visits}}'
+//   }
+// })
+
+
+
+.directive('mylink', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      linkdata: '='
+    },
+    templateUrl: 'app/links/link.html'
+  };
 });
